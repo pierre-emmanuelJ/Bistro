@@ -5,7 +5,7 @@
 ## Login   <pierre-emmanuel.jacquier@epitech.eu>
 ##
 ## Started on  undefined Oct 28 8:26:29 PM 2018 Pierre-Emmanuel Jacquier
-## Last update Mon Oct 28 8:26:47 PM 2018 Pierre-Emmanuel Jacquier
+## Last update Mon Oct 28 9:13:48 PM 2018 Pierre-Emmanuel Jacquier
 ##
 
 CC = gcc
@@ -16,7 +16,8 @@ TARGET = bistro
 
 CFLAGS	= -Wall -Wextra -g
 
-SRC	= main.c
+SRC	= main.c \
+	  lexer.c
 
 OBJS = $(SRC:.c=.o)
 
