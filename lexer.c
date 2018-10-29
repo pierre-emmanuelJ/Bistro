@@ -5,7 +5,7 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 9:09:57 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Tue Oct 29 12:56:19 AM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 12:59:34 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #include "bistro.h"
@@ -39,13 +39,12 @@ t_lexem *lex(char *str)
             str++;
             continue;
         }
-        lexem = realloc(lexem, sizeof(t_lexem));
-        memset(&lexem[i], 0, sizeof(t_lexem));
+        lexem = realloc(lexem, sizeof(t_lexem) * (i+1));
+        memset(lexem+i, 0, sizeof(t_lexem));
         if (isdigit(*str))
         {
             str = get_nuber_expression(str, lexem+i);
             lexem[i++].lex_type = NUMBER;
-            printf("%s\n", lexem[i++].expression);
             continue;
         }
         if (is_type(*str))
@@ -57,8 +56,7 @@ t_lexem *lex(char *str)
         }
         return (NULL);
     }
-    i++;
-    lexem = realloc(lexem, sizeof(t_lexem));
+    lexem = realloc(lexem, sizeof(t_lexem) * (i+1));
     memset(lexem+i, 0, sizeof(t_lexem));
     return (lexem);
 }
