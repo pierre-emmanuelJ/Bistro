@@ -5,7 +5,7 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 8:27:30 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Mon Oct 28 10:56:53 PM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 1:32:52 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #ifndef BISTRO_H_
@@ -18,6 +18,7 @@
 #include <ctype.h>
 
 typedef enum    e_type    t_type;
+typedef struct    e_tree    t_tree;
 
 enum    e_type
 {
@@ -36,11 +37,14 @@ typedef struct  s_lexem
     char        *expression;
 }               t_lexem;
 
-// typedef struct  s_tree
-// {
-//     t_type      lex_type;
-//     char        *expression;
-// }               t_tree;
+struct          e_tree
+{
+    t_type      lex_type;
+    char        *expression;
+    t_tree      *parent;
+    t_tree      *branch_right;
+    t_tree      *branch_left;
+};
 
 
 t_lexem *lex();
