@@ -5,7 +5,7 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 8:27:30 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Tue Oct 29 8:25:41 PM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 8:43:11 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #ifndef BISTRO_H_
@@ -49,6 +49,5 @@ struct          e_tree
 
 t_lexem *lex();
 bool    is_type(char c);
-char    *get_nuber_expression(char *str, t_lexem *lexem);
 
 #endif /* !BISTRO_H_ */

@@ -5,12 +5,22 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 9:09:57 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Tue Oct 29 8:29:37 PM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 8:43:33 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #include "bistro.h"
 
-char    *get_nuber_expression(char *str, t_lexem *lexem)
+bool    is_type(char c)
+{
+    return (c == PLUS ||
+    c == MINUS ||
+    c == TIME ||
+    c == MODULO ||
+    c == OPEN_PARENTHESIS ||
+    c == CLOSING_PARENTHESIS);
+}
+
+static char    *get_nuber_expression(char *str, t_lexem *lexem)
 {
     int i = 0;
 
@@ -60,14 +70,4 @@ t_lexem     *lex(char *str)
     lexem = realloc(lexem, sizeof(t_lexem) * (i+1));
     memset(lexem+i, 0, sizeof(t_lexem));
     return (lexem);
-}
-
-bool    is_type(char c)
-{
-    return (c == PLUS ||
-    c == MINUS ||
-    c == TIME ||
-    c == MODULO ||
-    c == OPEN_PARENTHESIS ||
-    c == CLOSING_PARENTHESIS);
 }
