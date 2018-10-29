@@ -5,7 +5,7 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 8:27:08 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Mon Oct 28 11:58:45 PM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 8:30:04 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #include "bistro.h"
@@ -16,7 +16,7 @@ void usage(char *program_name)
     exit(1);
 }
 
-int main(int argc, char **argv)
+int         main(int argc, char **argv)
 {
     char    *expression;
     t_lexem *lexem;

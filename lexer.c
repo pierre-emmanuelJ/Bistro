@@ -5,14 +5,15 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 9:09:57 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Tue Oct 29 12:59:34 PM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 8:29:37 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #include "bistro.h"
 
-char *get_nuber_expression(char *str, t_lexem *lexem)
+char    *get_nuber_expression(char *str, t_lexem *lexem)
 {
     int i = 0;
+
     while (str[i] != 0)
     {
         if (!isdigit(str[i]))
@@ -27,9 +28,9 @@ char *get_nuber_expression(char *str, t_lexem *lexem)
     return (str+i);
 }
 
-t_lexem *lex(char *str)
+t_lexem     *lex(char *str)
 {
-    int i = 0;
+    int     i = 0;
     t_lexem *lexem = NULL;
 
     while(*str != 0)
@@ -61,7 +62,7 @@ t_lexem *lex(char *str)
     return (lexem);
 }
 
-bool is_type(char c)
+bool    is_type(char c)
 {
     return (c == PLUS ||
     c == MINUS ||
