@@ -5,20 +5,20 @@
 ** Login   <pierre-emmanuel.jacquier@epitech.eu>
 **
 ** Started on  undefined Oct 28 8:27:30 PM 2018 Pierre-Emmanuel Jacquier
-** Last update Tue Oct 29 1:32:52 PM 2018 Pierre-Emmanuel Jacquier
+** Last update Tue Oct 29 8:25:41 PM 2018 Pierre-Emmanuel Jacquier
 */
 
 #ifndef BISTRO_H_
 # define BISTRO_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-#include <ctype.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stdbool.h>
+# include <ctype.h>
 
 typedef enum    e_type    t_type;
-typedef struct    e_tree    t_tree;
+typedef struct  e_tree    t_tree;
 
 enum    e_type
 {
@@ -48,7 +48,7 @@ struct          e_tree
 
 
 t_lexem *lex();
-bool is_type(char c);
-char *get_nuber_expression(char *str, t_lexem *lexem);
+bool    is_type(char c);
+char    *get_nuber_expression(char *str, t_lexem *lexem);
 
 #endif /* !BISTRO_H_ */
